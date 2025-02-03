@@ -10,7 +10,7 @@ Wenn anmeldung fehl schlägt sind werte von Kunde leer
 
     id_kunde = input("Bitte geben Sie ihre ID an: ")
 
-    current_customer: Kunde = {
+    empty_kunde = {
         "id_kunde": "",
         "name": "",
         "vorname": "",
@@ -21,6 +21,8 @@ Wenn anmeldung fehl schlägt sind werte von Kunde leer
         "locked": True,
     }
 
+    current_customer: Kunde
+
     exists: bool = False
     for kunde in kunden:
         if id_kunde == kunde["id_kunde"]:
@@ -29,11 +31,11 @@ Wenn anmeldung fehl schlägt sind werte von Kunde leer
 
     if not exists:
         print("Diese ID existiert nicht!")
-        return current_customer
+        return empty_kunde
 
     if current_customer["locked"]:
         print("Ihr account ist gesperrt!!!\nBitte kontaktieren Side den Kudenservice!")
-        return current_customer
+        return empty_kunde
 
     for foo in range(4):
         if foo >= 3:
