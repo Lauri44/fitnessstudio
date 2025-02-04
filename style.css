@@ -1,0 +1,36 @@
+
+Screen{
+    align: center middle;
+}
+
+#mod {
+    color: green;
+}
+
+MainSelection{
+    background: gainsboro;
+    width:auto;
+    margin: 2;
+    height: auto;
+    padding: 1 2;
+}
+
+Register{
+    align: center middle;
+}
+
+Button{
+    width: 34;
+}
+
+#reg{
+    margin-bottom: 1;
+}
+
+#anm{
+    margin-bottom: 1;
+}
+
+.name_in{
+    width:34;
+}

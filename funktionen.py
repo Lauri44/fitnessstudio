@@ -129,7 +129,7 @@ def neuer_kunde() -> None:
         "id_kunde": id_kunde,
         "name": name,
         "vorname": vorname,
-        "kategorie": kategorie,
+        "kategorie": kategorie.value,
         "groesse": groesse,
         "gewicht": gewicht,
         "PIN": '0000',
@@ -152,6 +152,7 @@ def auswertung_bmi(bmi: float, id_kunde: str) -> None:
     :param bmi: float    """
     if bmi > 25:
         print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Übergewicht'.format(id_kunde, bmi))
-    elif bmi < 20:
-        print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Untergewicht'.format(id_kunde, bmi))
-    print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Normalgewicht'.format(id_kunde, bmi))
+    elif bmi >= 20:
+        print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Normalgewicht'.format(id_kunde, bmi))
+
+    print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Untergewicht'.format(id_kunde, bmi))

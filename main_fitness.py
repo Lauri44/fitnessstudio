@@ -1,15 +1,16 @@
 #Projekt Fitnesstudio
-#Ein Kollege
+#Alexander und Laurentius
 #18.11.2021
 #Zusammenstellung verschiedener Funktionen der Applikation Fitnesstudio
-from funktionen import neuer_kunde, anmeldung, berechne_bmi, auswertung_bmi
+from funktionen import neuer_kunde, anmeldung, berechne_bmi, auswertung_bmi, change_pin
 from global_stuff import Kunde
 
 
-current_user: Kunde
 
 
-def user_menu() -> None:
+
+
+def user_menu(current_user: Kunde) -> None:
 
     print("""
 
@@ -26,12 +27,12 @@ def user_menu() -> None:
 
         match user_input:
             case '1':
-                ...
+                change_pin(current_user)
             case '2':
                 bmi: float = berechne_bmi(current_user['groesse'], current_user['gewicht'])
                 auswertung_bmi(bmi, current_user['id_kunde'])
             case '3':
-                print("\nGood Bye! Have beatiful day :D")
+                print("\nGood Bye! Have beatiful day :D\n")
                 return
             case _:
                 print("\nDiese Option existiert nicht\n")
@@ -40,7 +41,7 @@ def user_menu() -> None:
 
 def main() -> None:
     """Startfunktion für den Aufruf verschiedener Funktionen der Applikation Fitnessstudio"""
-    
+    current_user: Kunde
     # TODO: ASCII rüber kopieren
 
     print("""
@@ -66,7 +67,7 @@ def main() -> None:
                 if current_user["id_kunde"] == "":
                     continue
 
-                if not user_menu():
+                if not user_menu(current_user):
                     return
 
             case '3':

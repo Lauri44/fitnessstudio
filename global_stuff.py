@@ -13,10 +13,7 @@ class Kategorie(Enum):
     """Probeabo"""
     K = 'K'
     """Krankenkasse"""
-
-
-
-
+    
 
 class Kunde(TypedDict):
     """Dictionary für Kunde"""
