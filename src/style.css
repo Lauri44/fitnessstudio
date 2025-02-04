@@ -1,0 +1,47 @@
+MainSelection {
+    align: center middle;
+}
+
+Register {
+    align: center middle;
+}
+
+Button {
+    width: 34;
+}
+
+.mod {
+    align-horizontal: center;
+    color: green;
+    height: auto;
+    width: auto;
+}
+
+.mainG {
+    margin: 1;
+    width: auto;
+    height: auto;
+    padding: 1 2;
+    background: lightgray;
+}
+
+
+#reg {
+    margin-bottom: 1;
+}
+
+#anm {
+    margin-bottom: 1;
+}
+
+.name_in {
+    width: 34;
+}
+
+.upper {
+    margin-bottom: 1;
+}
+
+Screen {
+    align: center middle;
+}
