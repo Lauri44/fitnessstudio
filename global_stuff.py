@@ -5,14 +5,17 @@ from enum import Enum
 class Kategorie(Enum):
     """Arten von Kunden. Wieso is Kunde hier? walla!"""
 
-    S = 0
+    S = 'S'
     """Stammkunde"""
-    N = 1
+    N = 'N'
     """Neukunde"""
-    P = 2
+    P = 'P'
     """Probeabo"""
-    K = 3
+    K = 'K'
     """Krankenkasse"""
+
+
+
 
 
 class Kunde(TypedDict):
