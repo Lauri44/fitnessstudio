@@ -21,7 +21,7 @@ class Kunde(TypedDict):
     id_kunde: str
     name: str
     vorname: str
-    kategorie: Kategorie
+    kategorie: str
     groesse: float
     gewicht: float
     PIN: str

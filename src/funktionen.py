@@ -16,7 +16,7 @@ Wenn Anmeldung fehl schlägt sind werte von Kunde leer
         "id_kunde": "",
         "name": "",
         "vorname": "",
-        "kategorie": Kategorie.S,
+        "kategorie": Kategorie.S.value,
         "groesse": 0.0,
         "gewicht": 0.0,
         "PIN": "",
@@ -54,7 +54,6 @@ Wenn Anmeldung fehl schlägt sind werte von Kunde leer
             continue
         else:
             break
-    print("(Mit q können sie jeder zeit abbrechen)")
 
     print("Sie wurden erfolgreich angemeldet :D")
 
@@ -154,5 +153,5 @@ def auswertung_bmi(bmi: float, id_kunde: str) -> None:
         print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Übergewicht'.format(id_kunde, bmi))
     elif bmi >= 20:
         print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Normalgewicht'.format(id_kunde, bmi))
-
-    print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Untergewicht'.format(id_kunde, bmi))
+    else:
+        print('Der Kunde mit der ID {0:6} hat mit einem BMI von {1:5.2f} Untergewicht'.format(id_kunde, bmi))

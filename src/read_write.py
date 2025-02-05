@@ -35,15 +35,16 @@ Dict is required to ensure that all values are in the correct order
 
     mode: str = "w"
 
-
+    if new:
+        mode = "a"
  
-    with open("kunden.csv", mode, newline="") as file:
+    with open("./kunden.csv", mode, newline="") as file:
         csv.DictWriter(file, fieldnames=__headers).writerows(kunden_daten)
 
 
 def getKunden() -> list[Kunde]:
     """Returns a list of dictionaries with the correct datatypes for all vaules"""
-    with open("kunden.csv", "r") as file:
+    with open("./kunden.csv", "r") as file:
         kunden: list[Kunde] = []
         
         

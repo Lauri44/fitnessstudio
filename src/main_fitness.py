@@ -23,7 +23,7 @@ def user_menu(current_user: Kunde) -> None:
 """)
 
     while True:
-        user_input: str = input("$ What do you wanna do?(1 2 or 3): ")
+        user_input: str = input("$ What do you wanna do?(1, 2 or 3): ")
 
         match user_input:
             case '1':
